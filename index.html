@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At-Taqwa Collection - Sarung Premium untuk Ibadah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+        /* GANTI URL BACKGROUND DI BAWAH INI */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/e2e8f0/334155?text=Ganti+Background+Foto+Disini');
+            background-size: cover;
+            background-position: center;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: #0d9488; /* teal-600 */
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3 text-2xl font-bold text-teal-800 font-lora">
+                <!-- CONTOH PENGGUNAAN URL GOOGLE DRIVE -->
+                <img src="https://drive.google.com/uc?export=view&id=[GANTI_DENGAN_ID_FILE_LOGO_ANDA]" alt="Logo At-Taqwa Collection" class="h-10 w-10 rounded-full">
+                <span>At-Taqwa Collection</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#keunggulan" class="nav-link text-gray-600 hover:text-teal-700">Keunggulan</a>
+                <a href="#koleksi" class="nav-link text-gray-600 hover:text-teal-700">Koleksi</a>
+                <a href="#promo" class="nav-link text-gray-600 hover:text-teal-700">Promo Umroh</a>
+                <a href="#faq" class="nav-link text-gray-600 hover:text-teal-700">FAQ</a>
+                <a href="#koleksi" class="bg-teal-700 text-white px-5 py-2.5 rounded-lg hover:bg-teal-800 transition duration-300 shadow-sm hover:shadow-md">
+                    Belanja Sekarang
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-teal-700 focus:outline-none">
+                    <i id="menu-open-icon" data-lucide="menu" class="w-7 h-7"></i>
+                    <i id="menu-close-icon" data-lucide="x" class="w-7 h-7 hidden"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md">
+            <a href="#keunggulan" class="mobile-menu-link block py-3 px-6 text-gray-700 hover:bg-teal-50">Keunggulan</a>
+            <a href="#koleksi" class="mobile-menu-link block py-3 px-6 text-gray-700 hover:bg-teal-50">Koleksi</a>
+            <a href="#promo" class="mobile-menu-link block py-3 px-6 text-gray-700 hover:bg-teal-50">Promo Umroh</a>
+            <a href="#faq" class="mobile-menu-link block py-3 px-6 text-gray-700 hover:bg-teal-50">FAQ</a>
+             <a href="#koleksi" class="mobile-menu-link block py-3 px-6 bg-teal-700 text-white font-semibold text-center mt-2 mb-4 mx-4 rounded-lg">
+                Belanja Sekarang
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero-bg text-white relative h-[80vh] min-h-[500px] flex items-center">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-4xl md:text-6xl font-bold font-lora leading-tight mb-4">Tingkatkan Kekhusyuan Ibadah dengan Sarung Premium At-Taqwa Collection</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
+                    Dibuat dari bahan pilihan yang sejuk dan nyaman, dengan desain elegan yang menambah wibawa. Sempurna untuk ibadah harian dan momen istimewa Anda.
+                </p>
+                <a href="#koleksi" class="bg-teal-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-teal-700 transition duration-300 transform hover:scale-105">
+                    Lihat Koleksi Sekarang
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Keunggulan Produk -->
+        <section id="keunggulan" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-12">Mengapa Memilih Sarung At-Taqwa Collection?</h2>
+                <div class="grid md:grid-cols-3 gap-10 md:gap-8">
+                    <!-- Keunggulan 1 -->
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                        <div class="bg-teal-100 p-4 rounded-full mb-4">
+                            <i data-lucide="gem" class="w-8 h-8 text-teal-700"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Bahan Katun Premium</h3>
+                        <p class="text-gray-600">Adem, lembut di kulit, dan tidak mudah kusut. Memberikan kenyamanan maksimal saat Anda beribadah, sehingga Anda bisa lebih fokus dan khusyuk.</p>
+                    </div>
+                    <!-- Keunggulan 2 -->
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                        <div class="bg-teal-100 p-4 rounded-full mb-4">
+                            <i data-lucide="palette" class="w-8 h-8 text-teal-700"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Motif Eksklusif & Elegan</h3>
+                        <p class="text-gray-600">Desain motif yang modern namun tetap menjaga nilai-nilai kesopanan. Setiap helai sarung menceritakan keindahannya sendiri.</p>
+                    </div>
+                    <!-- Keunggulan 3 -->
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                        <div class="bg-teal-100 p-4 rounded-full mb-4">
+                            <i data-lucide="scissors" class="w-8 h-8 text-teal-700"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Jahitan Rapi & Kuat</h3>
+                        <p class="text-gray-600">Diproduksi oleh pengrajin berpengalaman, memastikan setiap jahitan kuat, rapi, dan awet untuk penggunaan jangka panjang.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Koleksi Produk -->
+        <section id="koleksi" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-12 text-center">Koleksi Pilihan Kami</h2>
+                
+                <!-- Carousel Wrapper -->
+                <div class="relative w-full overflow-hidden">
+                    <!-- Carousel Track -->
+                    <div id="product-carousel" class="flex">
+                        <!-- Produk 1 -->
+                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 p-4">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden group text-left h-full flex flex-col">
+                                <img src="https://placehold.co/600x600/0f766e/FFFFFF?text=Sarung+Al-Fatih" alt="Sarung At-Taqwa Collection Seri Al-Fatih" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-5 flex flex-col flex-grow">
+                                    <h3 class="text-lg font-bold">At-Taqwa Collection Seri Al-Fatih</h3>
+                                    <p class="text-gray-600 text-sm mt-1 mb-3 flex-grow">Motif geometris modern dengan warna hijau emerald yang menenangkan.</p>
+                                    <p class="font-bold text-teal-700 text-lg mb-4 mt-2">Rp 150.000</p>
+                                    <a href="#" class="w-full block text-center bg-teal-700 text-white font-semibold py-2 rounded-lg hover:bg-teal-800 transition duration-300 mt-auto">Beli Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produk 2 -->
+                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 p-4">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden group text-left h-full flex flex-col">
+                                <img src="https://placehold.co/600x600/1e3a8a/FFFFFF?text=Sarung+An-Nur" alt="Sarung At-Taqwa Collection Seri An-Nur" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-5 flex flex-col flex-grow">
+                                    <h3 class="text-lg font-bold">At-Taqwa Collection Seri An-Nur</h3>
+                                    <p class="text-gray-600 text-sm mt-1 mb-3 flex-grow">Keanggunan motif klasik dalam balutan warna navy yang berwibawa.</p>
+                                    <p class="font-bold text-teal-700 text-lg mb-4 mt-2">Rp 150.000</p>
+                                    <a href="#" class="w-full block text-center bg-teal-700 text-white font-semibold py-2 rounded-lg hover:bg-teal-800 transition duration-300 mt-auto">Beli Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produk 3 -->
+                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 p-4">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden group text-left h-full flex flex-col">
+                                <img src="https://placehold.co/600x600/7f1d1d/FFFFFF?text=Sarung+Ar-Rahman" alt="Sarung At-Taqwa Collection Seri Ar-Rahman" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-5 flex flex-col flex-grow">
+                                    <h3 class="text-lg font-bold">At-Taqwa Collection Seri Ar-Rahman</h3>
+                                    <p class="text-gray-600 text-sm mt-1 mb-3 flex-grow">Sentuhan warna maroon yang hangat dengan motif songket yang mewah.</p>
+                                    <p class="font-bold text-teal-700 text-lg mb-4 mt-2">Rp 165.000</p>
+                                    <a href="#" class="w-full block text-center bg-teal-700 text-white font-semibold py-2 rounded-lg hover:bg-teal-800 transition duration-300 mt-auto">Beli Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produk 4 -->
+                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 p-4">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden group text-left h-full flex flex-col">
+                                <img src="https://placehold.co/600x600/1f2937/FFFFFF?text=Sarung+Al-Ikhlas" alt="Sarung At-Taqwa Collection Seri Al-Ikhlas" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-5 flex flex-col flex-grow">
+                                    <h3 class="text-lg font-bold">At-Taqwa Collection Seri Al-Ikhlas</h3>
+                                    <p class="text-gray-600 text-sm mt-1 mb-3 flex-grow">Kombinasi warna hitam dan emas untuk tampilan yang gagah dan eksklusif.</p>
+                                    <p class="font-bold text-teal-700 text-lg mb-4 mt-2">Rp 175.000</p>
+                                    <a href="#" class="w-full block text-center bg-teal-700 text-white font-semibold py-2 rounded-lg hover:bg-teal-800 transition duration-300 mt-auto">Beli Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Penawaran Spesial (Undian Umroh) -->
+        <section id="promo" class="py-16 md:py-24 bg-teal-50">
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3 text-center">
+                        <img src="image_8e046a.jpg" alt="Voucher Undian Umroh" class="rounded-lg shadow-2xl transform hover:rotate-3 transition duration-500">
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold font-lora text-teal-800 mb-4">Wujudkan Niat ke Tanah Suci Bersama At-Taqwa Collection!</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Setiap pembelian <strong class="text-teal-700">SATU</strong> buah sarung At-Taqwa Collection (motif apa saja), Anda berhak mendapatkan <strong class="text-teal-700">SATU KUPON UNDIAN</strong> untuk memenangkan <strong class="text-teal-700">PAKET UMROH GRATIS</strong> untuk satu orang pemenang!
+                        </p>
+                        <p class="text-gray-600 mb-8 font-semibold">
+                            Semakin banyak Anda membeli, semakin besar kesempatan Anda untuk menjadi tamu Allah. Niat baik, hasil terbaik.
+                        </p>
+                        <a href="#" class="bg-amber-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-600 transition duration-300 transform hover:scale-105 inline-block">
+                            Beli Sarung & Raih Kesempatannya!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5. Testimoni Pelanggan -->
+        <section id="testimoni" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-12">Apa Kata Mereka Tentang Sarung At-Taqwa Collection</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Testimoni 1 -->
+                    <div class="bg-gray-100 p-8 rounded-lg text-left relative">
+                         <i data-lucide="quote" class="absolute top-4 left-4 w-10 h-10 text-teal-200"></i>
+                        <p class="text-gray-600 italic mb-4 z-10 relative">"Bahannya adem banget, dipakai sholat tarawih semalaman tetap nyaman. Motifnya juga disukai sama istri saya. InsyaAllah beli lagi."</p>
+                        <p class="font-bold text-teal-800">Bapak Rahmat H.</p>
+                        <p class="text-sm text-gray-500">Cirebon</p>
+                    </div>
+                    <!-- Testimoni 2 -->
+                    <div class="bg-gray-100 p-8 rounded-lg text-left relative">
+                        <i data-lucide="quote" class="absolute top-4 left-4 w-10 h-10 text-teal-200"></i>
+                        <p class="text-gray-600 italic mb-4 z-10 relative">"Saya beli ini untuk hadiah Ayah. Beliau senang sekali. Katanya sarungnya terasa mewah dan beda dari yang biasa. Kemasannya juga bagus."</p>
+                        <p class="font-bold text-teal-800">Andi P.</p>
+                        <p class="text-sm text-gray-500">Jakarta</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Cara Pemesanan -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-12">3 Langkah Mudah untuk Memesan</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
+                     <!-- Connector line -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2">
+                        <svg width="100%" height="2">
+                          <line x1="0" y1="1" x2="100%" y2="1" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8 8"/>
+                        </svg>
+                    </div>
+                    <!-- Langkah 1 -->
+                    <div class="flex flex-col items-center z-10 bg-gray-50 p-4">
+                        <div class="bg-teal-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 border-4 border-gray-50">1</div>
+                        <h3 class="text-xl font-bold mb-2">Pilih Produk</h3>
+                        <p class="text-gray-600">Pilih motif sarung favorit Anda dari koleksi kami.</p>
+                    </div>
+                    <!-- Langkah 2 -->
+                    <div class="flex flex-col items-center z-10 bg-gray-50 p-4">
+                        <div class="bg-teal-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 border-4 border-gray-50">2</div>
+                        <h3 class="text-xl font-bold mb-2">Isi Data & Bayar</h3>
+                        <p class="text-gray-600">Klik "Beli Sekarang" dan isi data pengiriman, lalu lakukan pembayaran.</p>
+                    </div>
+                    <!-- Langkah 3 -->
+                    <div class="flex flex-col items-center z-10 bg-gray-50 p-4">
+                        <div class="bg-teal-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 border-4 border-gray-50">3</div>
+                        <h3 class="text-xl font-bold mb-2">Tunggu di Rumah</h3>
+                        <p class="text-gray-600">Pesanan Anda akan kami proses dan kirimkan. Kupon undian akan disertakan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section id="faq" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-12 text-center">Pertanyaan yang Sering Diajukan</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border rounded-lg">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>Bagaimana cara mengikuti undian Umroh?</span>
+                            <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-5 pt-0 text-gray-600">Cukup dengan melakukan pembelian minimal 1 sarung At-Taqwa Collection, Anda otomatis terdaftar dalam undian. Nomor pesanan Anda akan menjadi nomor undian Anda.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="border rounded-lg">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>Kapan pemenang undian akan diumumkan?</span>
+                             <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-5 pt-0 text-gray-600">Pemenang akan diumumkan pada tanggal 30 April 2026 melalui Live Instagram kami di @attaqwacollection. Pastikan Anda mengikuti akun kami untuk mendapatkan informasi terbaru.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="border rounded-lg">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>Apakah bisa bayar di tempat (COD)?</span>
+                             <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-5 pt-0 text-gray-600">Tentu, kami menyediakan layanan bayar di tempat (Cash on Delivery) untuk sebagian besar wilayah di Indonesia. Anda bisa memilih opsi ini saat checkout.</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="border rounded-lg">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>Berapa lama proses pengiriman?</span>
+                             <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-5 pt-0 text-gray-600">Estimasi pengiriman adalah 2-4 hari kerja untuk wilayah Jabodetabek dan kota besar lainnya. Untuk wilayah di luar itu, estimasi bisa memakan waktu 5-7 hari kerja, tergantung lokasi Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8 mb-8">
+                <!-- Brand Info -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold font-lora mb-4">At-Taqwa Collection</h3>
+                    <p class="text-gray-400 max-w-md">At-Taqwa Collection berkomitmen menyediakan busana muslim berkualitas tinggi yang menunjang kenyamanan ibadah dan penampilan sehari-hari.</p>
+                </div>
+                <!-- Kontak -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Kontak Kami</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>WhatsApp: <a href="#" class="hover:text-white">0812-3456-7890</a></li>
+                        <li>Email: <a href="#" class="hover:text-white">support@attaqwacollection.com</a></li>
+                        <li>Instagram: <a href="#" class="hover:text-white">@attaqwacollection</a></li>
+                    </ul>
+                </div>
+                <!-- Pembayaran -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Opsi Pembayaran</h4>
+                    <div class="flex flex-wrap gap-2">
+                       <div class="bg-white p-1 rounded"><img src="https://placehold.co/50x30/ffffff/000000?text=BCA" alt="BCA" class="h-6"></div>
+                       <div class="bg-white p-1 rounded"><img src="https://placehold.co/50x30/ffffff/000000?text=Mandiri" alt="Mandiri" class="h-6"></div>
+                       <div class="bg-white p-1 rounded"><img src="https://placehold.co/50x30/ffffff/000000?text=GoPay" alt="GoPay" class="h-6"></div>
+                       <div class="bg-white p-1 rounded"><img src="https://placehold.co/50x30/ffffff/000000?text=OVO" alt="OVO" class="h-6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 At-Taqwa Collection. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-open-icon');
+            const closeIcon = document.getElementById('menu-close-icon');
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    openIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                    lucide.createIcons();
+                });
+            }
+
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu) mobileMenu.classList.add('hidden');
+                    if (openIcon) openIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                });
+            });
+
+            // FAQ Accordion Logic
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    if (!content) return; 
+
+                    const icon = header.querySelector('.accordion-icon');
+                    const isOpen = content.style.maxHeight;
+
+                    document.querySelectorAll('.accordion-content').forEach(c => {
+                        if (c !== content) {
+                            c.style.maxHeight = null;
+                            const prevHeader = c.previousElementSibling;
+                            if (prevHeader) {
+                                const prevIcon = prevHeader.querySelector('.accordion-icon');
+                                if (prevIcon) prevIcon.classList.remove('rotate-180');
+                            }
+                        }
+                    });
+
+                    if (isOpen) {
+                        content.style.maxHeight = null;
+                        if (icon) icon.classList.remove('rotate-180');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        if (icon) icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // Product Carousel Logic
+            const carousel = document.getElementById('product-carousel');
+            if (carousel && carousel.children.length > 1) { 
+                let carouselInterval = setInterval(() => {
+                    const firstItem = carousel.children[0];
+                    if (firstItem) {
+                        carousel.style.transition = 'transform 0.7s ease-in-out';
+                        const itemWidth = firstItem.getBoundingClientRect().width;
+                        carousel.style.transform = `translateX(-${itemWidth}px)`;
+
+                        carousel.addEventListener('transitionend', () => {
+                            carousel.style.transition = 'none';
+                            carousel.appendChild(firstItem);
+                            carousel.style.transform = 'translateX(0)';
+                        }, { once: true });
+                    }
+                }, 2000); 
+            }
+        });
+    </script>
+</body>
+</html>
+
